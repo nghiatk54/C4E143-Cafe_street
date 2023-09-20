@@ -4,17 +4,17 @@
   margin: 0;
   box-sizing: border-box; }
 
-body header .navBar .navBar_searchBar input::placeholder, body header .navBar .navBar_searchBar input, body header .content .content_buy .order span, body header .content .content_buy .menu, body main .popular .popular_card_group .popular_card_item .content .content_img .rating .rating_content span {
+body header .navBar .navBar_searchBar input::placeholder, body header .navBar .navBar_searchBar input, body header .content .content_buy .order span, body header .content .content_buy .menu, body main .popular .popular_card_group .popular_card_item .content .content_img .rating .rating_content span, body main .menu .menu_cardGroup .item .item_content .img .rating .rating_content span, body main .menu .menu_cardGroup .item .item_content .body .body_frame .detail, body main .testimonial_cardGroup .item .item_body .content .content_comment, body footer .form .form_btn {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400; }
 
-body header .navBar .navBar_group .navBar_group_item a, body header .content .content_details, body main .delivery .delivery_group .item .item_info .details, body main .about .about_content .desc {
+body header .navBar .navBar_group .navBar_group_item a, body header .content .content_details, body main .delivery .delivery_group .item .item_info .details, body main .about .about_content .desc, body main .testimonial .testimonial_content .details, body main .testimonial_cardGroup .item .item_body .content .content_name {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 400; }
 
-body main .popular .popular_card_group .popular_card_item .content .content_body .info span, body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_nature div, body main .delivery .delivery_group .item .item_info .title, body main .about .about_content .details {
+body main .popular .popular_card_group .popular_card_item .content .content_body .info span, body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_nature div, body main .delivery .delivery_group .item .item_info .title, body main .about .about_content .details, body main .menu .menu_cardGroup .item .item_content .body .body_info span {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 600; }
@@ -24,14 +24,20 @@ body header .content .content_title {
   font-size: 48px;
   font-weight: 600; }
 
-body header .content .content_buy .order, body main .about .about_content .btn {
+body header .content .content_buy .order, body main .about .about_content .btn, body footer .form .form_btn {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #2f2105;
-  border-radius: 33px; }
+  border-radius: 33px;
+  padding: 12px 32px;
+  box-shadow: 0px 4px 32px 0px rgba(223, 195, 124, 0.25); }
 
-body header .content .content_buy .order .order_iconCart, body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_addToCart {
+body header .content .content_buy .order span, body footer .form .form_btn {
+  color: #fff;
+  font-weight: 600; }
+
+body header .content .content_buy .order .order_iconCart, body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_addToCart, body main .menu .menu_cardGroup .item .item_content .body .body_frame .addToCart {
   background: #ff902b;
   color: #fff;
   border-radius: 50%;
@@ -39,7 +45,7 @@ body header .content .content_buy .order .order_iconCart, body main .popular .po
   justify-content: center;
   align-items: center; }
 
-body main .popular .popular_title::before, body main .delivery .delivery_title::before, body main .about .about_content .title::before {
+body main .popular .popular_title::before, body main .delivery .delivery_title::before, body main .about .about_content .title::before, body main .menu .menu_title::before {
   position: absolute;
   right: 0px;
   bottom: 4px;
@@ -48,12 +54,99 @@ body main .popular .popular_title::before, body main .delivery .delivery_title::
   border-radius: 12px;
   background: #ff902b; }
 
-body main .popular .popular_title, body main .delivery .delivery_title, body main .about .about_content .title {
+body main .popular .popular_title, body main .delivery .delivery_title, body main .about .about_content .title, body main .menu .menu_title, body main .testimonial .testimonial_content .title, body footer .title {
   font-family: "Poppins", sans-serif;
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 1.28px;
   color: #000; }
+
+body main .popular .popular_card_group, body main .menu .menu_cardGroup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px; }
+
+body main .popular .popular_card_group .popular_card_item, body main .menu .menu_cardGroup .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 355px;
+  height: 385px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.7) 100%); }
+
+body main .popular .popular_card_group .popular_card_item .content, body main .menu .menu_cardGroup .item .item_content {
+  width: 343px;
+  height: 373px;
+  background: #fff;
+  border-radius: 12px; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_img, body main .menu .menu_cardGroup .item .item_content .img {
+  position: relative;
+  width: 307px;
+  height: 226px;
+  border-radius: 12px;
+  margin: 24px auto 0; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_img .rating, body main .menu .menu_cardGroup .item .item_content .img .rating {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  width: 70px;
+  height: 34px;
+  border-radius: 27px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_img .rating .rating_content, body main .menu .menu_cardGroup .item .item_content .img .rating .rating_content {
+  width: 62px;
+  height: 26px;
+  border-radius: 50px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_img .rating .rating_content span, body main .menu .menu_cardGroup .item .item_content .img .rating .rating_content span {
+  font-weight: 700;
+  color: #2f2105;
+  letter-spacing: 0.56px;
+  margin-right: 4px; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_img .rating .rating_content i, body main .menu .menu_cardGroup .item .item_content .img .rating .rating_content i {
+  color: #ffd057;
+  font-size: 14px; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_body, body main .menu .menu_cardGroup .item .item_content .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 282px;
+  height: 85px;
+  margin: 20px auto 0px; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_body .info, body main .menu .menu_cardGroup .item .item_content .body .body_info {
+  display: flex;
+  justify-content: space-between; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_body .info span, body main .menu .menu_cardGroup .item .item_content .body .body_info span {
+  letter-spacing: 0.96px;
+  color: #2f2105; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_body .info .info_price, body main .menu .menu_cardGroup .item .item_content .body .body_info .price {
+  font-weight: 700; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_body .frame, body main .menu .menu_cardGroup .item .item_content .body .body_frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_addToCart, body main .menu .menu_cardGroup .item .item_content .body .body_frame .addToCart {
+  width: 43px;
+  height: 43px;
+  font-size: 17px; }
 
 body {
   font-family: "Poppins", sans-serif;
@@ -176,11 +269,8 @@ body {
         display: flex;
         align-items: center; }
         body header .content .content_buy .order {
-          padding: 12px 32px;
           margin-right: 24px; }
           body header .content .content_buy .order span {
-            color: #fff;
-            font-weight: 600;
             margin-right: 10px; }
           body header .content .content_buy .order .order_iconCart {
             width: 22px;
@@ -216,94 +306,28 @@ body {
       z-index: 2;
       list-style-type: none;
       width: 90%;
-      height: 385px;
-      display: flex;
-      justify-content: space-between; }
-      body main .popular .popular_card_group .popular_card_item {
+      height: 385px; }
+      body main .popular .popular_card_group .popular_card_item .content .img1 {
+        background: url(../images/card_1.png) center/cover no-repeat; }
+      body main .popular .popular_card_group .popular_card_item .content .img2 {
+        background: url(../images/card_2.png) center/cover no-repeat; }
+      body main .popular .popular_card_group .popular_card_item .content .img3 {
+        background: url(../images/card_3.png) center/cover no-repeat; }
+      body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_nature {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-        width: 355px;
-        height: 385px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.7) 100%); }
-        body main .popular .popular_card_group .popular_card_item .content {
-          width: 343px;
-          height: 373px;
-          background: #fff;
-          border-radius: 12px; }
-          body main .popular .popular_card_group .popular_card_item .content .content_img {
-            position: relative;
-            width: 307px;
-            height: 226px;
-            background: url(../images/card_1.png) center/cover no-repeat;
-            border-radius: 12px;
-            margin: 24px auto 0; }
-            body main .popular .popular_card_group .popular_card_item .content .content_img .rating {
-              position: absolute;
-              top: 7px;
-              left: 10px;
-              width: 70px;
-              height: 34px;
-              border-radius: 27px;
-              background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
-              display: flex;
-              justify-content: center;
-              align-items: center; }
-              body main .popular .popular_card_group .popular_card_item .content .content_img .rating .rating_content {
-                width: 62px;
-                height: 26px;
-                border-radius: 50px;
-                background: #fff;
-                display: flex;
-                align-items: center;
-                justify-content: center; }
-                body main .popular .popular_card_group .popular_card_item .content .content_img .rating .rating_content span {
-                  font-weight: 700;
-                  color: #2f2105;
-                  letter-spacing: 0.56px;
-                  margin-right: 4px; }
-                body main .popular .popular_card_group .popular_card_item .content .content_img .rating .rating_content i {
-                  color: #ffd057;
-                  font-size: 14px; }
-          body main .popular .popular_card_group .popular_card_item .content .content_body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 282px;
-            height: 85px;
-            margin: 20px auto 0px; }
-            body main .popular .popular_card_group .popular_card_item .content .content_body .info {
-              display: flex;
-              justify-content: space-between; }
-              body main .popular .popular_card_group .popular_card_item .content .content_body .info span {
-                letter-spacing: 0.96px;
-                color: #2f2105; }
-              body main .popular .popular_card_group .popular_card_item .content .content_body .info .info_price {
-                font-weight: 700; }
-            body main .popular .popular_card_group .popular_card_item .content .content_body .frame {
-              display: flex;
-              justify-content: space-between;
-              align-items: center; }
-              body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_nature {
-                display: flex;
-                column-gap: 24px; }
-                body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_nature div {
-                  min-width: 64px;
-                  padding: 4px 16px;
-                  border: 2px solid #ffd28f;
-                  border-radius: 8px;
-                  font-size: 16px;
-                  letter-spacing: 0.64px;
-                  color: #ffd28f;
-                  text-align: center; }
-                body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_nature .hot {
-                  color: #ff902b;
-                  border-color: #ff902b; }
-              body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_addToCart {
-                width: 43px;
-                height: 43px;
-                font-size: 17px; }
+        column-gap: 24px; }
+        body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_nature div {
+          min-width: 64px;
+          padding: 4px 16px;
+          border: 2px solid #ffd28f;
+          border-radius: 8px;
+          font-size: 16px;
+          letter-spacing: 0.64px;
+          color: #ffd28f;
+          text-align: center; }
+        body main .popular .popular_card_group .popular_card_item .content .content_body .frame .frame_nature .hot {
+          color: #ff902b;
+          border-color: #ff902b; }
   body main .delivery {
     position: relative;
     width: 1170px;
@@ -409,5 +433,159 @@ body {
         font-weight: 700;
         color: #f4ae26;
         cursor: pointer; }
+  body main .menu {
+    position: relative;
+    margin: 120px auto 0;
+    width: 1148px;
+    max-width: 100%; }
+    body main .menu .menu_title {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    body main .menu .menu_title::before {
+      content: "";
+      width: 121px; }
+    body main .menu .menu_cardGroup {
+      list-style-type: none;
+      padding-top: 85px; }
+      body main .menu .menu_cardGroup .item {
+        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16); }
+        body main .menu .menu_cardGroup .item .item_content .img1 {
+          background: url(../images/menu_card_1.png) center/cover no-repeat; }
+        body main .menu .menu_cardGroup .item .item_content .img2 {
+          background: url(../images/menu_card_2.png) center/cover no-repeat; }
+        body main .menu .menu_cardGroup .item .item_content .img3 {
+          background: url(../images/menu_card_3.png) center/cover no-repeat; }
+        body main .menu .menu_cardGroup .item .item_content .img4 {
+          background: url(../images/menu_card_4.png) center/cover no-repeat; }
+        body main .menu .menu_cardGroup .item .item_content .img5 {
+          background: url(../images/menu_card_5.png) center/cover no-repeat; }
+        body main .menu .menu_cardGroup .item .item_content .img6 {
+          background: url(../images/menu_card_6.png) center/cover no-repeat; }
+        body main .menu .menu_cardGroup .item .item_content .body .body_frame .detail {
+          font-weight: 600;
+          color: #7e7d7a;
+          letter-spacing: 0.56px;
+          width: 161px; }
+  body main .testimonial {
+    position: relative;
+    width: 100%;
+    height: 484px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    body main .testimonial .testimonial_content {
+      width: 414px;
+      margin-left: 136px; }
+      body main .testimonial .testimonial_content .details {
+        width: 352px;
+        margin-top: 16px;
+        color: #7e7d7a; }
+  body main .testimonial::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 945px;
+    height: 484px;
+    background: url(../images/bg_test.png) center/cover no-repeat;
+    border-radius: 0 24px 24px 0;
+    z-index: -1; }
+  body main .testimonial_cardGroup {
+    position: relative;
+    list-style-type: none;
+    width: 858px;
+    height: 292px;
+    display: flex;
+    justify-content: space-between; }
+    body main .testimonial_cardGroup .item {
+      position: relative;
+      width: 270px;
+      height: 100%; }
+      body main .testimonial_cardGroup .item .item_img {
+        width: 216px;
+        height: 100%; }
+      body main .testimonial_cardGroup .item .img1 {
+        background: url(../images/test_1.png) center/cover no-repeat; }
+      body main .testimonial_cardGroup .item .img2 {
+        background: url(../images/test_2.png) center/cover no-repeat; }
+      body main .testimonial_cardGroup .item .img3 {
+        background: url(../images/test_3.png) center/cover no-repeat; }
+      body main .testimonial_cardGroup .item .item_body {
+        position: absolute;
+        left: 30px;
+        bottom: 22px;
+        width: 240px;
+        height: 98px;
+        background: rgba(255, 211, 144, 0.62);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        body main .testimonial_cardGroup .item .item_body .content {
+          background: #ffcb7c;
+          border-radius: 8px;
+          width: 226px;
+          height: 86px;
+          padding: 10px 8px; }
+          body main .testimonial_cardGroup .item .item_body .content .content_name {
+            font-weight: 500;
+            color: #2f2105;
+            letter-spacing: 0.72px; }
+          body main .testimonial_cardGroup .item .item_body .content .content_comment {
+            color: #2f2105;
+            letter-spacing: 0.56px; }
+    body main .testimonial_cardGroup .bullet {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -18px; }
+      body main .testimonial_cardGroup .bullet .bullet_circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #f8e9d2; }
+      body main .testimonial_cardGroup .bullet .bullet_circle:first-child {
+        background: #ff912b; }
+  body footer {
+    width: 1170px;
+    height: 392px;
+    margin: 120px auto;
+    border-radius: 24px;
+    background: url(../images/footer_bg.png) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 26px; }
+    body footer .title {
+      color: #fff; }
+    body footer .form {
+      width: 486px;
+      height: 54px;
+      border-radius: 42px;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      body footer .form .form_input::placeholder,
+      body footer .form .form_input {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.64px;
+        color: #7e7d7a; }
+      body footer .form .form_input {
+        margin-left: 10px;
+        border: none;
+        padding: 6px; }
+      body footer .form .form_input:focus {
+        outline: none; }
+      body footer .form .form_btn {
+        border: none;
+        margin-right: 5px; }
 
 /*# sourceMappingURL=style.css.map */
